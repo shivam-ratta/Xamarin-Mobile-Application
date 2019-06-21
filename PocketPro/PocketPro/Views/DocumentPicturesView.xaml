@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PocketPro.ViewModels"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="PocketPro.Views.DocumentPicturesView" Padding="5,5,5,20">
+    <ContentView.Content>
+        <StackLayout Margin="0" VerticalOptions="FillAndExpand">
+            <Label Text="Pictures" Style="{StaticResource HeaderText}" Margin="0,0,10,0"/>
+
+            <Label IsVisible="{Binding NoItems}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">No pictures are available.</Label>
+
+            <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="true"
+                              FlowItemTappedCommand="{Binding ItemTappedCommand}" 
+                              FlowItemsSource="{Binding Pictures}"  >
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="5,0,5,5" Spacing="0" Padding="0">
+                            <Image Source="{Binding Path}" Aspect="AspectFill" HeightRequest="80" Margin="0">
+								<Image.GestureRecognizers>
+									<ClickGestureRecognizer Clicked="ClickGestureRecognizer_Clicked"/>
+									<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" BindingContext="{Binding .}"/>
+								</Image.GestureRecognizers>
+                            
+                            </Image>
+                            <StackLayout BackgroundColor="{StaticResource DarkTransparent}" Padding="5" Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="Fill" 
+                                        TextColor="White"
+                                        XAlign="Start" 
+                                        YAlign="Center" 
+                                        Margin="0" 
+                                        Text="{Binding Title}"/>
+ 
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+
+            </flv:FlowListView>
+
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

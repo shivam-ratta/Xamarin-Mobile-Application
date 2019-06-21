@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PocketPro.ViewModels"
+             x:Class="PocketPro.Views.DocumentNotesView"  Padding="5,5,5,20">
+    <ContentView.Content>
+        <StackLayout Margin="0" VerticalOptions="FillAndExpand">
+            <Label Text="Notes" Style="{StaticResource HeaderText}" Margin="0,0,10,0"/>
+            <Label IsVisible="{Binding NoItems}"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">No notes are available.</Label>
+
+            <ListView ItemsSource="{Binding Notes}" HasUnevenRows="True" SelectionMode="Single" ItemSelected="ListView_OnItemSelected"> 
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BorderColor="{x:StaticResource Primary}" CornerRadius="5" Padding="10" Margin="0,0,0,5" BackgroundColor="Transparent">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="{x:StaticResource PrimaryDark}" HorizontalOptions="StartAndExpand"/>
+                                        <ImageButton Source="arrow.png" HorizontalOptions="End" Rotation="180" IsVisible="{Binding isVisible}"/>
+                                        <ImageButton Source="arrow.png" HorizontalOptions="End" RotationY="180" IsVisible="{Binding isNotVisible}"/>
+
+                                    </StackLayout>
+                                    <StackLayout IsVisible="{Binding isVisible}" Padding="0" Margin="0">
+                                        <Editor HorizontalOptions="FillAndExpand" HeightRequest="120" Text="{Binding Text}" TextColor="{StaticResource PrimaryDark}" FontSize="12"/>
+                                        <Button Text="Delete" BindingContext="{Binding Id}" HorizontalOptions="End"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button VerticalOptions="EndAndExpand" Text="Add New Note" Style="{StaticResource DefaultButton}" Clicked="AddNewNote_OnClicked" x:Name="AddNewNote"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

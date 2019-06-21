@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PocketPro.ViewModels"
+             x:Class="PocketPro.Views.DocumentAudioView"  Padding="5,5,5,20">
+    <ContentView.Content>
+        <StackLayout Margin="0" VerticalOptions="FillAndExpand">
+            <Label Text="Audio" Style="{StaticResource HeaderText}" Margin="0,0,10,0"/>
+            <Label IsVisible="{Binding NoItems}"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">No audio recordings are available.</Label>
+
+            <ListView ItemsSource="{Binding Pictures}" HasUnevenRows="True" SelectionMode="Single" ItemSelected="ListView_OnItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="{x:StaticResource Primary}" CornerRadius="5" Padding="10"  BackgroundColor="Transparent" Margin="0,0,0,5">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="{x:StaticResource PrimaryDark}" HorizontalOptions="StartAndExpand"/>
+                                        <ImageButton Source="play_button.png" HorizontalOptions="End" IsVisible="{Binding isVisible}" BackgroundColor="Transparent"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Date}" TextColor="{x:StaticResource PrimaryDark}" HorizontalOptions="StartAndExpand"/>
+
+                                        <Label Text="{Binding Size}" TextColor="{x:StaticResource PrimaryDark}" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView> 
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

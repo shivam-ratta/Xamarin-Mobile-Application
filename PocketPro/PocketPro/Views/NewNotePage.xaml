@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketPro.Views.NewNotePage"   >
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Style="{StaticResource Container}">
+            <Label Style="{StaticResource HeaderText}">New Note</Label>
+            
+            <Label>Title</Label>
+            <Entry x:Name="Title" HorizontalOptions="FillAndExpand" BackgroundColor="#CC505050"/>
+
+            <Label>Details</Label>
+            <Editor x:Name="Text" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#CC505050"/>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                <Button Clicked="CancelNoteButton_Clicked" Text="Cancel" x:Name="CancelNoteButton" HorizontalOptions="FillAndExpand" Style="{StaticResource CancelButton}"/>
+                <Button Clicked="SaveNoteButton_Clicked" Text="Save" x:Name="SaveNoteButton" HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

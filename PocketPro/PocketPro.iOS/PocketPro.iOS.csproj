@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8AA41FD-A4AF-4614-AEC1-9A7EDEC9A07B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PocketPro.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>PocketPro.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CameraPreviewRenderer.cs" />
+    <Compile Include="iOSBrightnessService.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="UICameraPreview.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\tab_about.png" />
+    <BundleResource Include="Resources\tab_about%402x.png" />
+    <BundleResource Include="Resources\tab_about%403x.png" />
+    <BundleResource Include="Resources\tab_feed.png" />
+    <BundleResource Include="Resources\tab_feed%402x.png" />
+    <BundleResource Include="Resources\tab_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\PocketPro\PocketPro.csproj">
+      <Project>{8C988A3F-D7BA-4EDD-B3E2-6213F74F7FE7}</Project>
+      <Name>PocketPro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green-video-lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green-audio-lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green-camera-lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green-note-lg.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green-note-lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\linkedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_green - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo2 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigate2 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigate2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\play_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\social2 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\social2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\social23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ss3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ss4 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ss4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\support - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_feed - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\docs - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_audio_lg - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_audio_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_camera_lg - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_camera_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_docs_button - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_docs_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_navigate_button - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_navigate_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_social_button - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_social_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_support_button - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Old Buttons\green_support_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\artboard.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\camera2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_docs_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_navigate_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_note_lg - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_note_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_social_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_support_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_support_xl - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_support_xl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_video_lg - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_video_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home2 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigation\docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigation\docsx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigation\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigation\navigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigation\social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigation\support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_audio_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green_camera_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\s344.png" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketPro.App">
+    <Application.Resources>
+        <StyleSheet>
+            <![CDATA[
+            ^contentpage {
+                background-color: rgba(0, 0, 0, .1);
+            }
+        
+            ]]>
+        </StyleSheet>
+
+        <OnPlatform x:TypeArguments="Font" Android="14" iOS="13" Default="14"  x:Key="TitleFontSize" />
+
+
+        <Color x:Key="Primary">#7DBD00</Color>
+        <Color x:Key="PrimaryDark">#b5b5b5</Color>
+        <Color x:Key="PrimaryDanger">#FF0000</Color>
+        <Color x:Key="Accent">#96d1ff</Color>
+        <Color x:Key="LightTextColor">#BDBDBD</Color>
+        <Color x:Key="DarkTransparent">#E5000000</Color>
+        <Color x:Key="PrimaryGray">#2D2D2D</Color>
+        
+        <Style x:Key="QuickNavButton" TargetType="ImageButton">
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="10,5,10,20" />
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+
+        <Style x:Key="MainButton" TargetType="ImageButton">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="WidthRequest" Value="100" />
+            <Setter Property="HeightRequest" Value="100" />
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <Style x:Key="HeaderText" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="0,20" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <Style x:Key="HeaderImage" TargetType="Image">
+            <Setter Property="HeightRequest" Value="80" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="0,10" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="BorderColor" Value="{StaticResource Primary}" />
+        </Style>
+
+        <Style x:Key="DefaultButton" TargetType="Button" BasedOn="Button">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="BorderColor" Value="{StaticResource Primary}" />
+        </Style>
+        
+        <Style x:Key="CancelButton" TargetType="Button" BasedOn="Button">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+            <Setter Property="BorderColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="BackgroundColor" Value="{StaticResource DarkTransparent}" />
+            <Setter Property="FontSize" Value="{DynamicResource TitleFontSize}" />
+        </Style>
+
+        <Style TargetType="Editor">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="BackgroundColor" Value="{StaticResource DarkTransparent}" />
+            <Setter Property="FontSize" Value="{DynamicResource TitleFontSize}" />
+        </Style>
+
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundImage" Value="background.png" />
+        </Style>
+
+        <OnPlatform x:TypeArguments="Thickness" x:Key="Padding" iOS="10,100,10,10" Android="10,40"   />
+        
+        <Style TargetType="StackLayout" x:Key="Container" ApplyToDerivedTypes="True"> 
+            <Setter Property="BackgroundColor" Value="{StaticResource DarkTransparent}"/>
+            <Setter Property="Padding" Value="{DynamicResource Padding}"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+        
+        <Style TargetType="ContentView" ApplyToDerivedTypes="True">
+            <Setter Property="Padding" Value="20" />
+        </Style>
+
+
+    </Application.Resources>
+</Application>

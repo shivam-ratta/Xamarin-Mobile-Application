@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PocketPro.ViewModels"
+             xmlns:pocketpro="clr-namespace:PocketPro"
+             x:Class="PocketPro.Views.MainPage"
+             Title="Home"
+             x:Name="BrowseItemsPage"
+             BackgroundColor="#00000000">
+    <ContentPage.BindingContext>
+        <vm:BaseViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Local Styles that are not shared -->
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout HorizontalOptions="FillAndExpand" Style="{StaticResource Container}" >
+
+        <Label HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,20">Session Name</Label>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Opacity="1" Padding="0" Margin="0">
+            <ImageButton Source="green_video_lg.png" Style="{x:StaticResource QuickNavButton}" x:Name="ShowCameraVideo" Clicked="ShowCamera_Clicked"/>
+            <ImageButton Source="green_camera_lg.png"  Style="{x:StaticResource QuickNavButton}" x:Name="ShowCameraPicture" Clicked="ShowCameraPicture_Clicked"/>
+            <ImageButton Source="green_audio_lg.png" Style="{x:StaticResource QuickNavButton}" x:Name="RecordAudioButton" Clicked="RecordAudioButton_Clicked"/>
+            <ImageButton Source="green_note_lg.png" Style="{x:StaticResource QuickNavButton}" x:Name="CreateNewNoteButton" Clicked="CreateNewNoteButton_OnClicked"/>
+        </StackLayout>
+
+        <Grid HorizontalOptions="Center" Padding="0" Margin="0" ColumnSpacing="0" RowSpacing="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ImageButton Source="green_docs_button.png" Grid.Row="0" Grid.Column="0" Style="{x:StaticResource MainButton}" Clicked="ImageButton_Clicked" x:Name="DocumentsButton">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value=".95" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+            <ImageButton Source="green_navigate_button.png" Grid.Row="0" Grid.Column="1" Style="{x:StaticResource MainButton}" Clicked="NavigateButton_Clicked" x:Name="NavigateButton">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value=".95" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+            <ImageButton Source="green_social_button.png" Grid.Row="1" Grid.Column="0" Style="{x:StaticResource MainButton}" Clicked="SocialButton_Clicked" x:Name="SocialButton">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value=".95" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+            <ImageButton Source="green_support_button.png" Grid.Row="1" Grid.Column="1" Style="{x:StaticResource MainButton}" Clicked="SupportButton_Clicked" x:Name="SupportButton" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value=".95" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+
+             
+        </Grid>
+        <Button Text="End Session" Style="{StaticResource DefaultButton}" VerticalOptions="End" Margin="0,40"/>
+        <pocketpro:CameraPreview HeightRequest="300" HorizontalOptions="FillAndExpand" Camera="Rear" x:Name="Camera" AbsoluteLayout.LayoutFlags="None" Margin="-1000,-1000"/>
+    </StackLayout>
+
+    
+</ContentPage>

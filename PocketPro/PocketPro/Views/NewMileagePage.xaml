@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:Xamarin.Toolkit.Effects;assembly=Xamarin.Toolkit.Effects"
+             x:Class="PocketPro.Views.NewMileagePage"   >
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Style="{StaticResource Container}">
+            <Label Style="{StaticResource HeaderText}">Log Miles</Label>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" TextColor="White" VerticalOptions="CenterAndExpand">Number of Miles:</Label>
+                <Entry Grid.Column="1" x:Name="Miles" HorizontalOptions="FillAndExpand" FontAttributes="Bold" TextColor="White" HeightRequest="60" FontSize="Large" Placeholder="Enter the numer of miles traveled." BackgroundColor="{StaticResource PrimaryGray}">
+                    <Entry.Effects>
+                        <effects:LabelSizeFontToFit />
+                        <effects:EntryRemoveLine/>
+                        <effects:EntryRemoveBorder/>
+                    </Entry.Effects>
+                </Entry>
+            </Grid>
+
+            <Label TextColor="White" FontSize="Medium">Description (Optional):</Label>
+            <Editor x:Name="Description" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="White" Placeholder="Enter some information about this trip." BackgroundColor="{StaticResource PrimaryGray}">
+                <Editor.Effects>
+                    <effects:LabelSizeFontToFit />
+                    
+                </Editor.Effects>
+            </Editor>
+
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+
+                <Button Clicked="CancelButton_Clicked" Text="Cancel" x:Name="CancelNoteButton" HorizontalOptions="FillAndExpand" Style="{StaticResource CancelButton}"/>
+                <Button Clicked="SaveMilageButton_Clicked" Text="Save" x:Name="SaveNoteButton" HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

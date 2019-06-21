@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PocketPro.ViewModels"
+             x:Class="PocketPro.Views.NavigatePage"
+             Icon="home.png"
+             NavigationPage.TitleIcon="home.png"
+             Title="Take Me There">
+    <StackLayout HorizontalOptions="FillAndExpand" Style="{StaticResource Container}" >
+        <Label Text="Let's get you there" Style="{x:StaticResource HeaderText}" />
+        <Image Source="green_support_xl.png" Style="{x:StaticResource HeaderImage}"/>
+        <Button Text="Maps"  Clicked="Button_Clicked" />
+        <Button Text="Mileage Tracker" Clicked="MileageTracker_Clicked"/>
+    </StackLayout>
+</ContentPage>

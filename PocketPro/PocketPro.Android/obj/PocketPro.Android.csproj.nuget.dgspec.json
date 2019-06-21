@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro.Android\\PocketPro.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro.Android\\PocketPro.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro.Android\\PocketPro.Android.csproj",
+        "projectName": "PocketPro.Android",
+        "projectPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro.Android\\PocketPro.Android.csproj",
+        "packagesPath": "C:\\Users\\Alcatraj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alcatraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid81"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid81": {
+            "projectReferences": {
+              "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj": {
+                "projectPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid81": {
+          "dependencies": {
+            "DLToolkit.Forms.Controls.FlowListView": {
+              "target": "Package",
+              "version": "[2.0.10, )"
+            },
+            "Plugin.MediaManager": {
+              "target": "Package",
+              "version": "[0.6.1, )"
+            },
+            "Rox.Xamarin.Video": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Sentry": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.ViewPager": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.v4": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.v7.CardView": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.v7.MediaRouter": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Xamarin.FFImageLoading": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.220655, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj",
+        "projectName": "PocketPro",
+        "projectPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj",
+        "packagesPath": "C:\\Users\\Alcatraj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alcatraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "DLToolkit.Forms.Controls.FlowListView": {
+              "target": "Package",
+              "version": "[2.0.11, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Plugin.AudioRecorder": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Plugin.MediaManager": {
+              "target": "Package",
+              "version": "[0.6.1, )"
+            },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[3.0.0.12, )"
+            },
+            "Rox.Xamarin.Video": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Xamarin.FFImageLoading": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.220655, )"
+            },
+            "Xamarin.Forms.GoogleMaps": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Xamarin.Toolkit.Effects": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

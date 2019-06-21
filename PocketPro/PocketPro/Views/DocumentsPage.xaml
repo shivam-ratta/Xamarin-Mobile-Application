@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketPro.Views.DocumentsPage"
+             Title="Documents">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HeightRequest" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout HorizontalOptions="FillAndExpand" Style="{StaticResource Container}" Spacing="0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10,0,10">
+            <Button Text="PICTURES" x:Name="PicturesButton" Clicked="PicturesButton_OnClicked" HorizontalOptions="FillAndExpand"/>
+            <Button Text="VIDEO"  x:Name="VideoButton"  Clicked="VideoButton_OnClicked" HorizontalOptions="FillAndExpand"/>
+            <Button Text="AUDIO"  x:Name="AudioButton" Clicked="AudioButton_OnClicked" HorizontalOptions="FillAndExpand"/>
+            <Button Text="NOTES"  x:Name="NotesButton" Clicked="NotesButton_OnClicked" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <ContentView x:Name="ContentView" Margin="0" Padding="0" />
+    </StackLayout>
+</ContentPage>

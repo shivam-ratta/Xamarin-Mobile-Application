@@ -1,0 +1,110 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj",
+        "projectName": "PocketPro",
+        "projectPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\PocketPro.csproj",
+        "packagesPath": "C:\\Users\\Alcatraj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alcatraj\\Pictures\\New folder (2)\\PocketPro\\PocketPro\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alcatraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "DLToolkit.Forms.Controls.FlowListView": {
+              "target": "Package",
+              "version": "[2.0.11, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Plugin.AudioRecorder": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Plugin.MediaManager": {
+              "target": "Package",
+              "version": "[0.6.1, )"
+            },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[3.0.0.12, )"
+            },
+            "Rox.Xamarin.Video": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Xamarin.FFImageLoading": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.6.0.220655, )"
+            },
+            "Xamarin.Forms.GoogleMaps": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Xamarin.Toolkit.Effects": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

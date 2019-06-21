@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+       xmlns:local="clr-namespace:PocketPro.Views"
+       RouteHost="pocketpro.com"
+       RouteScheme="app"
+       Route="PocketPro"
+       FlyoutBehavior="Flyout"
+       Title="PocketPro"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       x:Class="PocketPro.AppShell" NavigationPage.HasNavigationBar="True" NavigationPage.HasBackButton="True" FlyoutBackgroundColor="Aqua">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#7DBD00</Color>
+            <Color x:Key="Primary">#7DBD00</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ShellForegroundColor" Value="White" />
+                <Setter Property="Shell.ShellTitleColor" Value="White" />
+                <Setter Property="Shell.ShellDisabledColor" Value="Red" />
+                <Setter Property="Shell.ShellTabBarDisabledColor" Value="Yellow" />
+                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+                <Setter Property="BorderColor" Value="{StaticResource Primary}" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+            <Style TargetType="Button" x:Key="PrimaryButton">
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+                <Setter Property="BorderColor" Value="{StaticResource Primary}" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkTransparent}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="Black" Orientation="Vertical" Padding="20" HeightRequest="200" Margin="0">
+                <Image Source="logo2.png" HeightRequest="60" HorizontalOptions="CenterAndExpand" />
+                <Label VerticalOptions="StartAndExpand" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalOptions="CenterAndExpand">PocketPro</Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <ContentView  BackgroundColor="Black"  VerticalOptions="FillAndExpand"  Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+               
+            </ContentView>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <ContentView VerticalOptions="FillAndExpand"  Padding="20" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="{Binding Text}" TextColor="{x:StaticResource Primary}" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </ContentView>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    <Shell.MenuItems>
+        <MenuItem Text="Feedback" Clicked="MenuItem_Clicked"  />
+        <MenuItem Text="Help" Clicked="MenuItem_Clicked"/>
+        <MenuItem Text="Settings" Clicked="MenuItem_Clicked"/>
+        <MenuItem Text="Exit" Clicked="MenuItem_Clicked" />
+    </Shell.MenuItems>
+
+    <ShellItem x:Name="Shell">
+        <ShellSection Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </ShellSection>
+        <ShellSection Title="Docs" Icon="docs.png" Route="documents">
+            <ShellContent ContentTemplate="{DataTemplate local:DocumentsPage}"  />
+        </ShellSection>
+        <ShellSection Title="Navigate" Icon="navigate.png">
+            <ShellContent ContentTemplate="{DataTemplate local:NavigatePage}"  />
+        </ShellSection>
+        <ShellSection Title="Social" Icon="social.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SocialPage}"  />
+        </ShellSection>
+        <ShellSection Title="Support" Icon="support.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SupportPage}"  />
+        </ShellSection>
+    </ShellItem>
+</Shell>
